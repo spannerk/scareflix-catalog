@@ -9,3 +9,4 @@ steps:
   - --source=api_function
   - --trigger-http
   - --runtime=python312
+  - --gen2 
