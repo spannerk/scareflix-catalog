@@ -21,3 +21,15 @@ variable "project_id" {
 variable "region" {
   description = "GCP region in which to build the infrastructure"
 }
+
+variable "repo" {
+  description = "name of Cloud Source repo"
+}
+
+variable "repo_uri" {
+  description = "uri of this GitHub repo"
+}
+
+variable "connection_id" {
+  description = "the id of the connection to Github set up in the project"
+}
