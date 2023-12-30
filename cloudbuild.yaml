@@ -4,7 +4,7 @@ steps:
   - gcloud
   - functions
   - deploy
-  - cat-api
+  - hello_get
   - --region=europe-west1
   - --source=api_function
   - --trigger-http
