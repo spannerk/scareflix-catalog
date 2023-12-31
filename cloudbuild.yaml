@@ -9,5 +9,5 @@ steps:
   - --source=api_function
   - --trigger-http
   - --runtime=python312
-  - --entry-point=hello_get 
+  - --entry-point=get_videos 
   - --gen2 

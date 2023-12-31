@@ -1,4 +1,5 @@
 import functions_framework
+from google.cloud import firestore_v1
 
 @functions_framework.http
 def hello_get(request):
@@ -16,3 +17,9 @@ def hello_get(request):
         <https://cloud.google.com/functions/docs/writing/http#http_frameworks>
     """
     return "Hello World!"
+
+@functions_framework.http
+def get_videos(request):
+    db = firestore_v1.Client(project='scareflix', database='scareflix-db')
+    col_ref = db.collection("videos")
+    return [doc.to_dict() for doc in col_ref.get()]

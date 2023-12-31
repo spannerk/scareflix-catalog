@@ -14,7 +14,7 @@ paths:
       summary: Greet a user
       operationId: hello
       x-google-backend:
-        address: https://europe-west1-scareflix.cloudfunctions.net/hello_get
+        address: https://europe-west1-scareflix.cloudfunctions.net/scareflix-cat-api-func
       responses:
         '200':
           description: A successful response
