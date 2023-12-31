@@ -16,9 +16,6 @@ resource "google_api_gateway_api_config" "api_gw" {
       contents = filebase64("../openapi.yaml")
     }
   }
-  lifecycle {
-    create_before_destroy = true
-  }
 }
 
 resource "google_api_gateway_gateway" "api_gw" {
@@ -26,4 +23,9 @@ resource "google_api_gateway_gateway" "api_gw" {
   provider = google-beta
   api_config = google_api_gateway_api_config.api_gw.id
   gateway_id = "api-scareflix-gateway"
+  lifecycle {
+    replace_triggered_by = [
+      google_api_gateway_api_config.api_gw.id
+    ]
+  }
 }
