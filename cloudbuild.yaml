@@ -4,9 +4,10 @@ steps:
   - gcloud
   - functions
   - deploy
-  - hello_get
+  - scareflix-cat-api-func
   - --region=europe-west1
   - --source=api_function
   - --trigger-http
   - --runtime=python312
+  - --entry-point=hello_get 
   - --gen2 
