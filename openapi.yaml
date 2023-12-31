@@ -1,7 +1,7 @@
 # openapi2-functions.yaml
 swagger: '2.0'
 info:
-  title: scareflix-cat hello
+  title: scareflix-cat api
   description: Sample API on API Gateway with a Google Cloud Functions backend
   version: 1.0.0
 schemes:
@@ -14,7 +14,7 @@ paths:
       summary: Greet a user
       operationId: hello
       x-google-backend:
-        address: https://europe-west1-scareflix.cloudfunctions.net/python-http-function
+        address: https://europe-west1-scareflix.cloudfunctions.net/hello_get
       responses:
         '200':
           description: A successful response
