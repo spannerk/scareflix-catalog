@@ -9,10 +9,10 @@ schemes:
 produces:
   - application/json
 paths:
-  /hello:
+  /all-videos:
     get:
       summary: Greet a user
-      operationId: hello
+      operationId: all_videos
       x-google-backend:
         address: https://europe-west1-scareflix.cloudfunctions.net/scareflix-cat-api-func
       responses:
