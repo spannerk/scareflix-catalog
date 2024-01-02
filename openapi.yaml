@@ -11,10 +11,10 @@ produces:
 paths:
   /all-videos:
     get:
-      summary: Greet a user
+      summary: Get a list of videos in the catalog
       operationId: all_videos
       x-google-backend:
-        address: https://europe-west1-scareflix.cloudfunctions.net/scareflix-cat-api-func
+        address: https://europe-west1-scareflix.cloudfunctions.net/scareflix-cat-api-videos-function
       responses:
         '200':
           description: A successful response
