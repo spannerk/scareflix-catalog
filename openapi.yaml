@@ -2,7 +2,7 @@
 swagger: '2.0'
 info:
   title: scareflix-cat api
-  description: Sample API on API Gateway with a Google Cloud Functions backend
+  description: API for getting info from the video catalog for scareflix
   version: 1.0.0
 schemes:
   - https
@@ -20,3 +20,20 @@ paths:
           description: A successful response
           schema:
             type: string
+  /videos/{id}:
+    get:
+      summary: Get a list of videos in the catalog
+      operationId: video_by_id
+      x-google-backend:
+        address: https://europe-west1-scareflix.cloudfunctions.net/scareflix-cat-api-video-function
+        path_translation: CONSTANT_ADDRESS
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+      parameters:
+        - name: id
+          in: path
+          required: True
+          type: string
